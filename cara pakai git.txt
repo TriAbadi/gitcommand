@@ -1,0 +1,93 @@
+
+git init
+git add .	/ git add nama_file
+---------------------------------------------------APABILA BARU INSTAL GIT SCM
+git config --list
+git config --local --> khusus untuk repo ini saja
+git config --global user.name "namanye"
+git config --global user.email "email"
+-------------------------------------------------------------------------
+git commit -m "comment"
+	atau kalo sudah modified bisa gunakan seperti dibawah ini
+	tidak perlu lagi pakai git add (lihat di git status)
+	git commit -a -m "comment	/ git commit -am "comment"
+
+
+
+
+git status
+git log
+git log --all -decorate --oneline --graph  --> untuk melihat graph
+	atau pake alias agar tidak panjang ngetiknya (tinggal ketik alias 	saja)
+	alias graph="git log --all --decorate --oneline --graph"
+git branch
+git branch nama_branch
+git checkout nama_branch --> untuk pidah nama branch
+	kalo mau pindah ke commit yang lawas
+git checkout -b nama_branch --> pindah branch skalian bikin branch baru
+git checkout 7digithash commitnya
+
+	ada 2 jenis merge Fast Forward dan Three-way Merge
+	jangan lupa checkout dulu ke master
+git merge nama_branch
+	menghapus branch
+git branch -d nama_branch
+	untuk delete (-D) branch yg belum di merge
+git branch -D nama_branch
+	untuk mengetahui branch mana yg sudah merged
+git branch --merged
+	buat delete branch di origin github
+git push origin --delete features
+
+	kalo masuk ke VIM, cara keluarnya
+pencet escape
+:wq!
+	apabila terjadi konflik
+	dipilih code yg code editor
+	lalu save dan proses masih merging lalu
+git add .
+git commit
+
+
+
+fork/clone
+	clone
+git clone https_url
+
+git remote 
+git remote -v (verbous)
+
+
+		multiple 	remote)
+----- cara bekerja dari fork repo org lain, lalu dengan lokal)(
+	agar supaya up to date dengan remote yg kita fork tadi kita harus 		menambahkan remote baru yang ditujukan ke repo sandika galih tadi
+	jadi caranya tambhakan remote baru
+git remote add nama_remotenye_apa alamat_url
+	lalu graph
+	agar supaya head masternya menyambung ke sandhikagalih juga maka
+	perlu fetch
+git fetch sandhikagalih
+	apabila di sumber fork ada perubahan dan kita(lokal) mau update
+	kita merge yg ada di sumber fork ke lokal kita
+git merge traytech/master
+	setelah itu kita update juga yg ada di github kita
+git push -u origin master
+------
+
+
+------ ada setelah membuat repo baru di github
+git remote add origin https://github.com/minumtehtarik/test-2.git
+git push -u origin master --> untuk pertama kali mau remote
+	refresh halaman github
+------
+
+
+
+git push
+git fetch --> abis itu graph(apabila ada perubahan yg sama di github denga lokal) lalu kita git pull dulu
+
+git config --global --edit
+git remote set-url origin git@github.com:username/your-repository.git
+pwd
+clear
+ls
